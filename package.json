@@ -1,0 +1,28 @@
+{
+  "name": "dsh-acp-remote",
+  "version": "0.1.0",
+  "description": "Expose dsh ACP (dsh --profile acp) over WebSocket for remote clients (e.g. nexus-agent): configurable port/token, per-connection child process, stop/restart via settings",
+  "type": "module",
+  "main": "src/host/index.js",
+  "exports": {
+    ".": "./src/host/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/host/index.js",
+    "README.md",
+    "cordis.patch.yml"
+  ],
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}

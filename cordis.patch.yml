@@ -1,0 +1,4 @@
+- insert:
+    - id: acp-remote
+      name: "dsh-acp-remote"
+      config: {}
